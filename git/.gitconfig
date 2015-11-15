@@ -1,3 +1,9 @@
 [user]
 	email = mpolson64@gmail.com
-	name = Miles P. Olson
+    name = Miles P. Olson
+
+[github]
+    user = mpolson64
+
+[core]
+    editor = vim
