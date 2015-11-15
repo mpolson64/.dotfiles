@@ -1,3 +1,8 @@
+" Load plugins
+if filereadable(expand("~/.vim/vundle.vim"))
+    source ~/.vim/vundle.vim
+endif
+
 " General
 set nocompatible
 set autoread
@@ -16,6 +21,14 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+let g:indent_guides_guide_size = 1
+
+" Colors
+syntax on
+if &t_Co >= 256
+    colorscheme solarized
+    set background=dark
+endif
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
