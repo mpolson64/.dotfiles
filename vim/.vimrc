@@ -20,10 +20,15 @@ set laststatus=2
 let mapleader=','
 let g:mapleader=','
 nmap <leader>w :w!<cr> " quicksave
-map <C-j> <C-W>j " Decent split navigation scheme
+map <C-j> <C-W>j " split navigation scheme
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <leader>tn :tabnew<cr> " tab navigation scheme
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove<cr>
+map <leader>t<leader> :tabnext<cr>
 
 " Commands
 command W w !sudo tee % > /dev/null/
