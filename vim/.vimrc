@@ -10,6 +10,8 @@ set wildmenu
 set nocompatible
 set history=1024
 set autoread
+set splitbelow
+set splitright
 set rnu
 set ruler
 set laststatus=2
@@ -18,6 +20,10 @@ set laststatus=2
 let mapleader=','
 let g:mapleader=','
 nmap <leader>w :w!<cr> " quicksave
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " Commands
 command W w !sudo tee % > /dev/null/
