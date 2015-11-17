@@ -4,6 +4,9 @@ if filereadable(expand("~/.vim/vundle.vim"))
 endif
 
 " General
+filetype plugin on
+filetype indent on
+set wildmenu
 set nocompatible
 set history=1024
 set autoread
@@ -14,7 +17,7 @@ set laststatus=2
 " Keybinds
 let mapleader=','
 let g:mapleader=','
-nmap <leader>w :w!<cr> "quicksave
+nmap <leader>w :w!<cr> " quicksave
 
 " Commands
 command W w !sudo tee % > /dev/null/
