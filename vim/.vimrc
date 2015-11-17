@@ -5,6 +5,7 @@ endif
 
 " General
 set nocompatible
+set history=1024
 set autoread
 set rnu
 set ruler
@@ -12,6 +13,11 @@ set laststatus=2
 
 " Keybinds
 let mapleader=','
+let g:mapleader=','
+nmap <leader>w :w!<cr> "quicksave
+
+" Commands
+command W w !sudo tee % > /dev/null/
 
 " Indentation
 set autoindent
