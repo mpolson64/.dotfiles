@@ -20,7 +20,7 @@ set laststatus=2
 let mapleader=','
 let g:mapleader=','
 nmap <leader>w :w!<cr> " quicksave
-map <C-j> <C-W>j
+map <C-j> <C-W>j " Decent split navigation scheme
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
