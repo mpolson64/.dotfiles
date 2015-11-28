@@ -47,10 +47,8 @@ let g:indent_guides_guide_size = 1
 
 " Colors
 syntax on
-if &t_Co >= 256
-    colorscheme solarized
-    set background=dark
-endif
+colorscheme solarized
+set background=dark
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
