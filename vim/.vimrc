@@ -17,6 +17,7 @@ set ruler
 set laststatus=2
 
 " Keybinds
+imap jk <Esc>
 let mapleader=','
 let g:mapleader=','
 nmap <leader>w :w!<cr> " quicksave
