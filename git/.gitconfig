@@ -1,5 +1,5 @@
 [user]
-	email = mpolson64@gmail.com
+    email = mpolson64@gmail.com
     name = Miles P. Olson
 
 [github]
@@ -7,3 +7,5 @@
 
 [core]
     editor = vim
+[push]
+	default = simple
