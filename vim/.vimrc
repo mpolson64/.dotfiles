@@ -47,7 +47,7 @@ let g:indent_guides_guide_size = 1
 
 " Colors
 syntax on
-colorscheme solarized
+colorscheme dracula
 set background=dark
 
 " Enable loading the plugin/indent files for specific file types
