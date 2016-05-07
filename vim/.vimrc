@@ -50,6 +50,7 @@ set t_Co=16
 syntax on
 colorscheme solarized
 set background=dark
+g:airlinetheme=solarized
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
