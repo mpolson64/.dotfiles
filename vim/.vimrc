@@ -46,6 +46,7 @@ set expandtab
 let g:indent_guides_guide_size = 1
 
 " Colors
+set t_Co=16
 syntax on
 colorscheme solarized
 set background=dark
