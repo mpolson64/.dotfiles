@@ -45,12 +45,13 @@ set tabstop=4
 set expandtab
 let g:indent_guides_guide_size = 1
 
-" Colors
+" Colors & status bar
 set t_Co=16
 syntax on
 colorscheme solarized
 set background=dark
-g:airlinetheme=solarized
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts=1
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
