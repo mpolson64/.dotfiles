@@ -31,6 +31,7 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 map <leader>t<leader> :tabnext<cr>
+map <c-f> :call JsBeautify()<cr>
 
 " Commands
 command W w !sudo tee % > /dev/null/
