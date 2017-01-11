@@ -31,7 +31,6 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 map <leader>t<leader> :tabnext<cr>
-map <c-f> :call JsBeautify()<cr>
 
 " Commands
 command W w !sudo tee % > /dev/null/
@@ -44,15 +43,10 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
-let g:indent_guides_guide_size = 1
 
 " Colors & status bar
-set t_Co=16
 syntax on
-colorscheme molokai
-set background=dark
-let g:airline_theme='molokai'
-let g:airline_powerline_fonts=1
+colorscheme slate
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
