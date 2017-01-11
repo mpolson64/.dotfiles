@@ -21,6 +21,8 @@
   :ensure t)
 (use-package smartparens
   :ensure t)
+(use-package evil-surround
+  :ensure t)
 (use-package evil-smartparens
   :ensure t)
 (use-package magit
@@ -32,6 +34,7 @@
 (key-chord-mode 1)
 (global-company-mode 1)
 (smartparens-global-mode 1)
+(global-evil-surround-mode 1)
 (global-linum-mode 1)
 
 (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
