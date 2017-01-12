@@ -46,6 +46,8 @@
 
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(define-key helm-map (kbd "C-j") 'helm-next-line)
+(define-key helm-map (kbd "C-k") 'helm-previous-line)
 (define-key company-active-map [tab] 'company-comlete)
 (define-key company-active-map (kbd "C-j") 'company-select-next)
 (define-key company-active-map (kbd "C-k") 'company-select-previous)
