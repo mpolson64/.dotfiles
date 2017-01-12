@@ -19,6 +19,10 @@
   :ensure t)
 (use-package company
   :ensure t)
+(use-package projectile
+  :ensure t)
+(use-package helm-projectile
+  :ensure t)
 (use-package smartparens
   :ensure t)
 (use-package evil-surround
@@ -33,6 +37,7 @@
 (evil-mode 1)
 (key-chord-mode 1)
 (global-company-mode 1)
+(projectile-mode 1)
 (smartparens-global-mode 1)
 (global-evil-surround-mode 1)
 (global-linum-mode 1)
