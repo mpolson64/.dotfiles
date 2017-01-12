@@ -39,7 +39,15 @@
 
 (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
 
+(setq helm-autoresize-mode t)
+
+(setq company-idle-delay 0.1)
+(setq company-selection-wrap-around t)
+
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(define-key company-active-map [tab] 'company-comlete)
+(define-key company-active-map (kbd "C-j") 'company-select-next)
+(define-key company-active-map (kbd "C-k") 'company-select-previous)
 
 (load-theme 'monokai t)
