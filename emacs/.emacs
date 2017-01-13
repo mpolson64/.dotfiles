@@ -60,6 +60,10 @@
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
 (use-package magit
   :ensure t)
+(use-package powerline
+  :ensure t
+  :config
+  (powerline-center-evil-theme))
 (use-package monokai-theme
   :ensure t
   :init
