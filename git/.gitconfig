@@ -6,7 +6,7 @@
     user = mpolson64
 
 [core]
-    editor = vim
+    editor = emacs
     
 [push]
     default = simple
