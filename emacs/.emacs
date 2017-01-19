@@ -64,6 +64,17 @@
   :ensure t
   :config
   (powerline-center-evil-theme))
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+(use-package emojify
+  :ensure t
+  :config
+  (global-emojify-mode))
 (use-package monokai-theme
   :ensure t
   :init
