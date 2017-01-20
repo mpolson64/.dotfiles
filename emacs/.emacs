@@ -82,9 +82,9 @@
   :ensure t
   :config
   (global-emojify-mode))
-(use-package monokai-theme
+(use-package spacemacs-theme
   :ensure t
   :init
-  (load-theme 'monokai t))
+  (load-theme 'spacemacs-dark t))
 
 (global-linum-mode 1)
