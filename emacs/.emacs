@@ -46,6 +46,13 @@
   (setq company-selection-wrap-around t))
 (use-package helm-projectile
   :ensure t)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode))
 (use-package smartparens
   :ensure t
   :config
