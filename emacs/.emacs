@@ -1,5 +1,7 @@
 (setq inhibit-startup-screen t)
 
+(global-linum-mode 1)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -20,6 +22,7 @@
   :config
   (evil-mode 1)
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state))
+
 (use-package helm
   :ensure t
   :config
@@ -46,6 +49,7 @@
   (setq company-selection-wrap-around t))
 (use-package helm-projectile
   :ensure t)
+
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
@@ -53,28 +57,23 @@
   :ensure t
   :config
   (yas-global-mode))
-(use-package smartparens
-  :ensure t
-  :config
-  (smartparens-global-mode 1))
 (use-package aggressive-indent
   :ensure t
   :config
   (global-aggressive-indent-mode 1))
-(use-package evil-surround
+(use-package smartparens
   :ensure t
   :config
-  (global-evil-surround-mode 1))
+  (smartparens-global-mode 1))
 (use-package evil-smartparens
   :ensure t
   :init
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
-(use-package magit
-  :ensure t)
-(use-package powerline
+(use-package evil-surround
   :ensure t
   :config
-  (powerline-center-evil-theme))
+  (global-evil-surround-mode 1))
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
@@ -82,6 +81,11 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+(use-package powerline
+  :ensure t
+  :config
+  (powerline-center-evil-theme))
 (use-package emojify
   :ensure t
   :config
@@ -90,5 +94,3 @@
   :ensure t
   :init
   (load-theme 'spacemacs-dark t))
-
-(global-linum-mode 1)
