@@ -40,14 +40,14 @@
   (global-company-mode 1)
   (define-key company-active-map [tab] 'company-comlete)
   (define-key company-active-map (kbd "C-j") 'company-select-next)
-  (define-key company-active-map (kbd "C-k") 'company-select-previous))
-(use-package projectile
-  :ensure t
-  :config
-  (projectile-mode 1)
+  (define-key company-active-map (kbd "C-k") 'company-select-previous)
   :init
   (setq company-idle-delay 0.1)
   (setq company-selection-wrap-around t))
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode 1))
 (use-package helm-projectile
   :ensure t)
 
