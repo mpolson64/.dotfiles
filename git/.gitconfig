@@ -1,5 +1,6 @@
-[include]
-    path = ~/.gitconfig.local
+[user]
+    name = Miles P. Olson
+    email = mpolson64@gmail.com
 
 [alias]
 	c = commit -am
@@ -19,3 +20,6 @@
     
 [help]
 	autocorrect = 1
+
+[credential]
+	helper = cache

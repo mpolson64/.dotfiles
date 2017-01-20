@@ -1,6 +1,5 @@
 ## Git
 ln -sfv ~/.dotfiles/git/.gitconfig ~
-ln -sfv ~/.dotfiles/git/.gitconfig.local ~
 ln -sfv ~/.dotfiles/git/.gitignore ~
 
 ## Vim
