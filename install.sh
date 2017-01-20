@@ -1,6 +1,7 @@
 ## Git
 ln -sfv ~/.dotfiles/git/.gitconfig ~
 ln -sfv ~/.dotfiles/git/.gitconfig.local ~
+ln -sfv ~/.dotfiles/git/.gitignore ~
 
 ## Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
