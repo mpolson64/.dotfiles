@@ -40,7 +40,7 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-global-mode 1)
+  (projectile-mode 1)
   :init
   (setq company-idle-delay 0.1)
   (setq company-selection-wrap-around t))
