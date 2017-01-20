@@ -83,6 +83,12 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+(use-package magit
+  :ensure t
+  :config
+  (define-key magit-mode-map (kbd "C-j") 'magit-selection-forward)
+  (define-key magit-mode-map (kbd "C-k") 'magit-selection-backward))
+
 (use-package powerline
   :ensure t
   :config
