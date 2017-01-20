@@ -1,12 +1,21 @@
-[user]
-    email = mpolson64@gmail.com
-    name = Miles P. Olson
+[include]
+    path = ~/.gitconfig.local
 
-[github]
-    user = mpolson64
+[alias]
+	c = commit -am
+	up = pull
+	p = push
+	s = status
+	co = checkout
+	df = diff --color --color-words --abbrev
 
 [core]
     editor = emacs
+    excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
     
 [push]
     default = simple
+    
+[help]
+	autocorrect = 1
