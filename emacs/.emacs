@@ -60,12 +60,10 @@
   :init
   (setq company-idle-delay 0.1)
   (setq company-selection-wrap-around t))
-(use-package projectile
+(use-package helm-projectile
   :ensure t
   :config
-  (projectile-mode 1))
-(use-package helm-projectile
-  :ensure t)
+  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile))
 
 (use-package flycheck
   :ensure t
