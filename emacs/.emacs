@@ -38,7 +38,11 @@
   :ensure t
   :config
   (evil-mode 1)
-  (key-chord-define evil-insert-state-map "jk" 'evil-normal-state))
+  (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+  (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
+  (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
+  (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
+  (define-key evil-normal-state-map (kbd "C-l") 'windmove-right))
 
 (use-package helm
   :ensure t
