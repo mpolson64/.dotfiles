@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 
-;; Emacs is the primary editor I use and thus the most fully featured. The key/largest packages include:
+;; Emacs is the primary editor I use and thus the most fully featured.  The key/largest packages include:
 ;; * Evil
 ;; * Helm
 ;; * Company
@@ -65,7 +65,8 @@
 
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode))
+  :init
+  (global-flycheck-mode))
 (use-package yasnippet
   :ensure t
   :config
