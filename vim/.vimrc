@@ -16,6 +16,7 @@ set rnu
 set nu
 set ruler
 set laststatus=2
+set hlsearch
 
 " Keybinds
 imap jk <Esc>

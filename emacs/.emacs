@@ -89,6 +89,8 @@
   :ensure t
   :config
   (global-evil-surround-mode 1))
+(use-package evil-anzu
+  :ensure t)
 
 (use-package markdown-mode
   :ensure t
