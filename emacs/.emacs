@@ -1,3 +1,15 @@
+;;; .emacs --- Personal EMACS settings by mpolson64
+
+;;; Commentary:
+
+;; Emacs is the primary editor I use and thus the most fully featured. The key/largest packages include:
+;; * Evil
+;; * Helm
+;; * Company
+;; * Projectile
+
+;;; Code:
+
 (setq inhibit-startup-screen t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
