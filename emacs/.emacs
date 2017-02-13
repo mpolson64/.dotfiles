@@ -115,6 +115,10 @@
   :config
   (powerline-center-evil-theme)
   (setq powerline-default-separator 'slant))
+(use-package golden-ratio
+  :ensure t
+  :init
+  (golden-ratio-mode 1))
 (use-package emojify
   :ensure t
   :config
