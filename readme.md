@@ -17,3 +17,4 @@ Vim was my first editor and I still use it when I need a fast tool that exists i
 * Vim Surround
 * DelimitMate
 * Supertab
+* Anzu
