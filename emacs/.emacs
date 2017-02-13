@@ -67,7 +67,9 @@
 (use-package helm-projectile
   :ensure t
   :config
-  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile))
+  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile)
+  :init
+  (global-projectile-mode 1))
 
 (use-package flycheck
   :ensure t
