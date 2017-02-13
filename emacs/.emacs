@@ -107,14 +107,14 @@
 (use-package magit
   :ensure t
   :config
-  (define-key magit-mode-map (kbd "C-j") 'magit-selection-forward)
-  (define-key magit-mode-map (kbd "C-k") 'magit-selection-backward))
+  (define-key magit-mode-map (kbd "j") 'magit-section-forward)
+  (define-key magit-mode-map (kbd "k") 'magit-section-backward))
 
-(use-package powerline
-  :ensure t
-  :config
-  (powerline-center-evil-theme)
-  (setq powerline-default-separator 'slant))
+  (use-package powerline
+    :ensure t
+    :config
+    (powerline-center-evil-theme)
+    (setq powerline-default-separator 'slant))
 (use-package golden-ratio
   :ensure t
   :init
