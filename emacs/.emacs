@@ -10,6 +10,7 @@
 
 ;;; Code:
 
+;; Quality of life
 (setq inhibit-startup-screen t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -19,6 +20,7 @@
 
 (global-linum-mode 1)
 
+;; Package management
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -30,10 +32,13 @@
 (eval-when-compile
   (require 'use-package))
 
+;; Keybinding
 (use-package key-chord
   :ensure t
   :config
   (key-chord-mode 1))
+
+;; Vim emulator
 (use-package evil
   :ensure t
   :config
@@ -44,86 +49,101 @@
   (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
   (define-key evil-normal-state-map (kbd "C-l") 'windmove-right))
 
+;; Narrowing engine
 (use-package helm
   :ensure t
+  :init
+  (setq helm-autoresize-mode t)
   :config
   (helm-mode 1)
   (define-key helm-map (kbd "C-j") 'helm-next-line)
   (define-key helm-map (kbd "C-k") 'helm-previous-line)
-  :bind
-  ("M-x" . helm-M-x)
-  :init
-  (setq helm-autoresize-mode t))
+  (global-set-key (kbd "M-x") 'helm-M-x))
+
+;; Autocompleters
 (use-package company
   :ensure t
+  :init
+  (setq company-idle-delay 0.1)
+  (setq company-selection-wrap-around t)
   :config
   (global-company-mode 1)
   (define-key company-active-map (kbd "C-j") 'company-select-next)
-  (define-key company-active-map (kbd "C-k") 'company-select-previous)
-  :init
-  (setq company-idle-delay 0.1)
-  (setq company-selection-wrap-around t))
-(use-package helm-projectile
-  :ensure t
-  :config
-  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile)
-  :init
-  (projectile-global-mode 1))
+  (define-key company-active-map (kbd "C-k") 'company-select-previous))
 
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode))
 (use-package yasnippet
   :ensure t
   :config
-  (yas-global-mode))
+  (yas-global-mode 1))
+
+;; File manipulation
+(use-package helm-projectile
+  :ensure t
+  :config
+  (projectile-global-mode 1)
+  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile))
+
+;; Code style and sytax
+(use-package flycheck
+  :ensure t
+  :config
+  (global-flycheck-mode 1))
+
 (use-package aggressive-indent
   :ensure t
   :config
   (global-aggressive-indent-mode 1))
+
 (use-package smartparens
   :ensure t
   :config
   (smartparens-global-mode 1))
+
 (use-package evil-smartparens
   :ensure t
   :init
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
+
 (use-package evil-surround
   :ensure t
   :config
   (global-evil-surround-mode 1))
-(use-package evil-anzu
-  :ensure t)
 
+;; Language specific modes
 (use-package markdown-mode
   :ensure t
-  :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;; Utilities
 (use-package magit
   :ensure t
   :config
   (define-key magit-mode-map (kbd "j") 'magit-section-forward)
   (define-key magit-mode-map (kbd "k") 'magit-section-backward))
 
+;;UI elements
 (use-package powerline
   :ensure t
   :config
   (powerline-center-evil-theme)
   (setq powerline-default-separator 'slant))
+
+(use-package evil-anzu
+  :ensure t)
+
 (use-package golden-ratio
   :ensure t
-  :init
+  :config
   (golden-ratio-mode 1))
+
 (use-package emojify
   :ensure t
   :config
-  (global-emojify-mode))
+  (global-emojify-mode 1))
+
 (use-package spacemacs-theme
   :ensure t
   :init
