@@ -25,9 +25,10 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
-    (package-install 'use-package))
+  (package-install 'use-package))
 
 (eval-when-compile
   (require 'use-package))
@@ -111,11 +112,20 @@
   (global-evil-surround-mode 1))
 
 ;; Language specific modes
+(use-package anaconda-mode
+  :ensure t  
+  :config
+  (add-hook 'python-mode-hook 'anaconda-mode))
+(use-package company-anaconda
+  :ensure t
+  :config 
+  (add-to-list 'company-backends 'company-anaconda))
+
 (use-package markdown-mode
   :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
+	 ("\\.md\\'" . markdown-mode)
+	 ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
 ;; Utilities
