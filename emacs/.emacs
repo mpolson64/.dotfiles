@@ -58,7 +58,8 @@
   (helm-mode 1)
   (define-key helm-map (kbd "C-j") 'helm-next-line)
   (define-key helm-map (kbd "C-k") 'helm-previous-line)
-  (global-set-key (kbd "M-x") 'helm-M-x))
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (define-key evil-normal-state-map (kbd "SPC" )'helm-M-x))
 
 ;; Autocompleters
 (use-package company
