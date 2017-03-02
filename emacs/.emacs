@@ -13,6 +13,7 @@
 ;; Quality of life
 (setq inhibit-startup-screen t)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq sentence-end-double-space nil)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
