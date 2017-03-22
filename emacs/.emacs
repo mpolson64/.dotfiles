@@ -141,6 +141,8 @@
 
 (define-key org-mode-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
 (define-key org-mode-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key org-mode-map (kbd "<remap> <evil-beginning-of-line>") 'evil-beginning-of-visual-line)
+(define-key org-mode-map (kbd "<remap> <evil-end-of-line>") 'evil-end-of-visual-line)
 
 (use-package org-bullets
   :ensure t
