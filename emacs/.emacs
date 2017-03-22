@@ -122,12 +122,25 @@
   :config 
   (add-to-list 'company-backends 'company-anaconda))
 
+(use-package js2-mode
+  :ensure t
+  :mode ("\\.js\\'" . js2-mode))
+
 (use-package markdown-mode
   :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
 	 ("\\.md\\'" . markdown-mode)
 	 ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+;; Org
+(add-hook 'org-mode-hook 'visual-line-mode t)
+(add-hook 'org-mode-hook 'flyspell-mode)
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;; Utilities
 (use-package magit
