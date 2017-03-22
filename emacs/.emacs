@@ -134,8 +134,13 @@
   :init (setq markdown-command "multimarkdown"))
 
 ;; Org
+(require 'org)
+
 (add-hook 'org-mode-hook 'visual-line-mode t)
 (add-hook 'org-mode-hook 'flyspell-mode)
+
+(define-key org-mode-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key org-mode-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 
 (use-package org-bullets
   :ensure t
