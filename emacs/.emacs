@@ -66,7 +66,6 @@
   (defhydra helm-like-unite ()
     "vim movement"
     ("?" helm-help "help")
-    ("<escape>" keyboard-escape-quit "exit")
     ("<SPC>" helm-toggle-visible-mark "mark")
     ("a" helm-toggle-all-marks "mark")
 
@@ -82,7 +81,7 @@
     ("k" helm-previous-line "up")
     ("i" nil "cancel"))
 
-  (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body))
+  (key-chord-define helm-map "jk" 'helm-like-unite/body))
 
 ;; Autocompleters
 (use-package company
