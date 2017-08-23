@@ -92,8 +92,14 @@
   (setq company-selection-wrap-around t)
   :config
   (global-company-mode 1)
-  (define-key company-active-map (kbd "C-j") 'company-select-next)
-  (define-key company-active-map (kbd "C-k") 'company-select-previous))
+
+  (defhydra company-like-vim ()
+    "vim movement"
+    ("j" company-select-next "down")
+    ("k" company-select-previous "up")
+    ("i" nil "cancel"))
+
+  (key-chord-define company-active-map "jk" 'company-like-vim/body))
 
 (use-package yasnippet
   :ensure t
