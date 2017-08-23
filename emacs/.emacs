@@ -40,6 +40,9 @@
   :config
   (key-chord-mode 1))
 
+(use-package hydra
+  :ensure t)
+
 ;; Vim emulator
 (use-package evil
   :ensure t
@@ -58,10 +61,28 @@
   (setq helm-autoresize-mode t)
   :config
   (helm-mode 1)
-  (define-key helm-map (kbd "C-j") 'helm-next-line)
-  (define-key helm-map (kbd "C-k") 'helm-previous-line)
   (global-set-key (kbd "M-x") 'helm-M-x)
-  (define-key evil-normal-state-map (kbd "SPC" )'helm-M-x))
+  (define-key evil-normal-state-map (kbd "SPC" )'helm-M-x)
+  (defhydra helm-like-unite ()
+    "vim movement"
+    ("?" helm-help "help")
+    ("<escape>" keyboard-escape-quit "exit")
+    ("<SPC>" helm-toggle-visible-mark "mark")
+    ("a" helm-toggle-all-marks "mark")
+
+    ("/" (lambda ()
+	   (interactive)
+	   (execute-kbd-macro [?\C-s]))
+     "search")
+
+    ("v" helm-execute-persistent-action)
+    ("g" helm-beginning-of-buffer "top")
+    ("G" helm-end-of-buffer "bottom")
+    ("j" helm-next-line "down")
+    ("k" helm-previous-line "up")
+    ("i" nil "cancel"))
+
+  (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body))
 
 ;; Autocompleters
 (use-package company
