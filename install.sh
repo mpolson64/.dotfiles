@@ -12,4 +12,4 @@ ln -sfv ~/.dotfiles/vim/vundle.vim ~/.vim
 vim +PluginInstall +qall
 
 ## Emacs
-ln -sfv ~/.dotfiles/emacs/.emacs ~
+ln -sfv ~/.dotfiles/emacs.d/init.el ~/.emacs.d/init.el
