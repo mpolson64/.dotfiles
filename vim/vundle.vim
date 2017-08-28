@@ -12,9 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
-Plugin 'osyo-manga/vim-anzu'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
