@@ -48,7 +48,6 @@ set expandtab
 
 " Colors & status bar
 syntax on
-colorscheme slate
 
 " Enable loading the plugin/indent files for specific file types
 filetype plugin indent on
