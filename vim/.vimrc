@@ -12,11 +12,12 @@ set history=1024
 set autoread
 set splitbelow
 set splitright
-set rnu
 set nu
 set ruler
 set laststatus=2
+set incsearch
 set hlsearch
+set smartcase
 
 " Keybinds
 imap jk <Esc>
