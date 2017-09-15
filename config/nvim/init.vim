@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'godlygeek/tabular'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -17,6 +18,8 @@ Plug 'carlitux/deoplete-ternjs', { 'do:': 'npm install -g tern' }
 Plug 'pangloss/vim-javascript'
 
 Plug 'arakashic/chromatica.nvim'
+
+Plug 'plasticboy/vim-markdown'
 
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'

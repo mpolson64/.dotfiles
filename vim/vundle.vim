@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'godlygeek/tabular'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -18,6 +19,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 
 Plugin 'pangloss/vim-javascript'
+
+Plugin 'plasticboy/vim-markdown'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'dracula/vim'
