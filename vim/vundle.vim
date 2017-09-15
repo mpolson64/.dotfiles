@@ -11,10 +11,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
