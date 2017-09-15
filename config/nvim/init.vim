@@ -7,7 +7,7 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 
@@ -53,7 +53,6 @@ set nofoldenable
 imap jk <Esc> " more comfortable return to normal mode
 tmap <Esc> <C-\><C-n> " exit terminal with escape
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
-
 
 let mapleader="\<space>"
 let g:mapleader="\<space>"
