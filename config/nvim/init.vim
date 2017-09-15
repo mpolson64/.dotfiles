@@ -17,9 +17,12 @@ Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', { 'do:': 'npm install -g tern' }
 Plug 'pangloss/vim-javascript'
 
+Plug 'zchee/deoplete-clang'
 Plug 'arakashic/chromatica.nvim'
 
 Plug 'plasticboy/vim-markdown'
+
+Plug 'Shougo/neco-vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
