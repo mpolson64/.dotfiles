@@ -1,7 +1,6 @@
 " Load plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'godlygeek/tabular'
 
@@ -56,8 +55,8 @@ tmap <Esc> <C-\><C-n> " exit terminal with escape
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
 
 
-let mapleader=','
-let g:mapleader=','
+let mapleader="\<space>"
+let g:mapleader="\<space>"
 nmap <leader>w :w!<cr> " quicksave
 map <C-j> <C-W>j " split navigation scheme
 map <C-k> <C-W>k

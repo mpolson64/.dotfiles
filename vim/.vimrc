@@ -22,8 +22,8 @@ set nofoldenable
 
 " Keybinds
 imap jk <Esc>
-let mapleader=','
-let g:mapleader=','
+let mapleader="\<space>"
+let g:mapleader="\<space>"
 nmap <leader>w :w!<cr> " quicksave
 map <C-j> <C-W>j " split navigation scheme
 map <C-k> <C-W>k
