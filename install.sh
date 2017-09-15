@@ -12,7 +12,11 @@ ln -sfv ~/.dotfiles/vim/vundle.vim ~/.vim
 vim +PluginInstall +qall
 
 ## Neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ln -sfv ~/.dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
+
+nvim +PlugInstall +qall
 
 ## Emacs
 ln -sfv ~/.dotfiles/emacs.d/init.el ~/.emacs.d/init.el
