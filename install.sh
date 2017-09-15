@@ -11,5 +11,8 @@ ln -sfv ~/.dotfiles/vim/vundle.vim ~/.vim
 
 vim +PluginInstall +qall
 
+## Neovim
+ln -sfv ~/.dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
+
 ## Emacs
 ln -sfv ~/.dotfiles/emacs.d/init.el ~/.emacs.d/init.el
