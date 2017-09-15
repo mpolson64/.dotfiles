@@ -45,6 +45,7 @@ set laststatus=2
 set incsearch
 set hlsearch
 set smartcase
+set nofoldenable
 
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
