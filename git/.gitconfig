@@ -11,9 +11,21 @@
 	df = diff --color --color-words --abbrev
 
 [core]
-    editor = emacs
+    editor = nvim
     excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+    attributesfile = ~/.gitattributes
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = vimdiff
+
+[mergetool]
+    prompt = false
     
 [push]
     default = simple
