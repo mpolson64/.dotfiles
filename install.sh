@@ -72,7 +72,7 @@ while true; do
     read -p "Configure EMACS? [Y/n]" yn
     case $yn in
         [Yy]* )
-            mkdir -p ~/.emacs.emacs
+            mkdir -p ~/.emacs.d
             touch ~/.emacs.d/init.el
             ln -sfv ~/.dotfiles/emacs.d/init.el ~/.emacs.d/init.el
             break;;
