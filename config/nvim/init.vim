@@ -7,16 +7,13 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
+Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 Plug 'w0rp/ale'
 
-Plug 'zchee/deoplete-jedi'
-
-Plug 'carlitux/deoplete-ternjs', { 'do:': 'npm install -g tern' }
 Plug 'pangloss/vim-javascript'
 
-Plug 'zchee/deoplete-clang'
 Plug 'arakashic/chromatica.nvim'
 
 Plug 'plasticboy/vim-markdown'
@@ -26,11 +23,8 @@ Plug 'Shougo/neco-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
 
-call plug#end()
 
-" Enable plugins
-let g:deoplete#enable_at_startup = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+call plug#end()
 
 " General
 filetype plugin on
@@ -49,6 +43,9 @@ set hlsearch
 set smartcase
 set nofoldenable
 
+" Plugin configuraion
+let g:UltiSnipsExpandTrigger = ';'
+
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
 tmap <Esc> <C-\><C-n> " exit terminal with escape
@@ -57,10 +54,10 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
 let mapleader="\<space>"
 let g:mapleader="\<space>"
 nmap <leader>w :w!<cr> " quicksave
-map <C-j> <C-W>j " split navigation scheme
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j " split navigation scheme
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 map <leader>tn :tabnew<cr> " tab navigation scheme
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
