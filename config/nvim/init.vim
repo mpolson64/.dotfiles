@@ -44,8 +44,14 @@ set hlsearch
 set smartcase
 set nofoldenable
 
-" Plugin configuraion
-let g:UltiSnipsExpandTrigger = ';'
+" UltiSnips configuraion
+let g:ulti_expand_or_jump_res = 0
+function! Ulti_ExpandOrJump_and_getRes()
+    call UltiSnips#ExpandSnippetOrJump()
+    return g:ulti_expand_or_jump_res
+endfunction
+
+inoremap <CR> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":"\n"<CR>
 
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
