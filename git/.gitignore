@@ -14,7 +14,10 @@ __pycache__/
 *.swo
 
 # Local testing files
- *.local
+*.local
+
+# Log files
+*.log
 
 # Folder view configuration files
 .DS_Store
