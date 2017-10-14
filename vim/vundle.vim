@@ -14,7 +14,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
 
 Plugin 'ervandew/supertab'
