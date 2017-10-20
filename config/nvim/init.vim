@@ -72,10 +72,6 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
 let mapleader="\<space>"
 let g:mapleader="\<space>"
 nmap <leader>w :w!<cr> " quicksave
-"map <C-j> <C-W>j " split navigation scheme
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
 map <leader>tn :tabnew<cr> " tab navigation scheme
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
