@@ -2,7 +2,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 Plug 'godlygeek/tabular'
+
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
@@ -44,6 +48,12 @@ set incsearch
 set hlsearch
 set smartcase
 set nofoldenable
+
+" NERDTree configuration
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " UltiSnips configuraion
 let g:ulti_expand_or_jump_res = 0
