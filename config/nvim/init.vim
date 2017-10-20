@@ -12,12 +12,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
-Plug 'Valloric/YouCompleteMe',  { 'do': './install.py --js-completer' }
+Plug 'Valloric/YouCompleteMe',  { 'do': '~/.local/share/nvim/plugged/YouCompleteMe/install.py --tern-completer' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'
 
-Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
 
 Plug 'arakashic/chromatica.nvim'
