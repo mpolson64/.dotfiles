@@ -1,5 +1,7 @@
 # Node
 node_modules/
+.tern-config
+.tern-project
 
 # Python
 __pycache__/
