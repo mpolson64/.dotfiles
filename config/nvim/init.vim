@@ -4,6 +4,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mhinz/vim-grepper'
 
+Plug 'easymotion/vim-easymotion'
+
 Plug 'godlygeek/tabular'
 
 Plug 'scrooloose/nerdtree'
@@ -72,7 +74,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
 
 let mapleader="\<space>"
 let g:mapleader="\<space>"
-nmap <leader>w :w!<cr> " quicksave
+map <leader>w :w!<cr> " quicksave
 map <leader>tn :tabnew<cr> " tab navigation scheme
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
