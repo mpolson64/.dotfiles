@@ -22,7 +22,7 @@ Plug 'w0rp/ale'
 
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
-Plug 'leafgraland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'arakashic/chromatica.nvim'
 
