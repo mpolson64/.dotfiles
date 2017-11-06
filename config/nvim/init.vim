@@ -20,15 +20,10 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'
 
+Plug 'sheerun/vim-polyglot'
+
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-
-Plug 'arakashic/chromatica.nvim'
-
-Plug 'plasticboy/vim-markdown'
-
-Plug 'Shougo/neco-vim'
+Plug 'mattn/emmet-vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
