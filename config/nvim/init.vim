@@ -16,7 +16,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe',  { 'do': '~/.local/share/nvim/plugged/YouCompleteMe/install.py --tern-completer' }
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'
 
@@ -53,15 +52,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" UltiSnips configuraion
-let g:ulti_expand_or_jump_res = 0
-function! Ulti_ExpandOrJump_and_getRes()
-    call UltiSnips#ExpandSnippetOrJump()
-    return g:ulti_expand_or_jump_res
-endfunction
-
-inoremap <CR> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":"\n"<CR>
 
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
