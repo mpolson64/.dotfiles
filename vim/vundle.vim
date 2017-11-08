@@ -11,11 +11,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 
+
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-commentary'
 
 Plugin 'ervandew/supertab'
 

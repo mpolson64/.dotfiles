@@ -6,7 +6,10 @@ Plug 'mhinz/vim-grepper'
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'tpope/vim-sleuth'
 Plug 'godlygeek/tabular'
+
+Plug 'tpope/vim-commentary'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -70,15 +73,6 @@ map <C-p> :FZF<cr>
 
 " Commands
 command W w !sudo tee % > /dev/null/
-
-" Indentation
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
 
 " Colors & status bar
 syntax on
