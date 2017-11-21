@@ -18,7 +18,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
-Plug 'Valloric/YouCompleteMe',  { 'do': '~/.local/share/nvim/plugged/YouCompleteMe/install.py --tern-completer' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'mhartington/nvim-typescript'
 
 Plug 'w0rp/ale'
 
@@ -55,6 +58,14 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Deoplete configuratioj
+let g:deoplete#enable_at_startup = 1
+
+" Easy Motion configuration
+let g:EasyMotion_smartcase = 1
+
+nmap f <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-s2)
 
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
