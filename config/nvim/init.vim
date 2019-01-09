@@ -1,44 +1,27 @@
 " Load plugins
 call plug#begin('~/.local/share/nvim/plugged')
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'mhinz/vim-grepper'
-
 Plug 'easymotion/vim-easymotion'
-
-Plug 'tpope/vim-sleuth'
-Plug 'godlygeek/tabular'
-
-Plug 'tpope/vim-commentary'
-
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'mhartington/nvim-typescript'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
 
-Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
 
-
 call plug#end()
 
 " General
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+set expandtab
 set wildmenu
 set nocompatible
 set history=1024
@@ -53,13 +36,17 @@ set hlsearch
 set smartcase
 set nofoldenable
 
-" NERDTree configuration
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+set wrap
+set linebreak
+set nolist
+set textwidth=0
+set wrapmargin=0
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Deoplete configuratioj
-let g:deoplete#enable_at_startup = 1
+" ALE configuration
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
 
 " Easy Motion configuration
 let g:EasyMotion_smartcase = 1
@@ -70,7 +57,6 @@ nmap s <Plug>(easymotion-s2)
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
 tmap <Esc> <C-\><C-n> " exit terminal with escape
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" " autocomplete with tab
 
 let mapleader="\<space>"
 let g:mapleader="\<space>"
@@ -80,7 +66,7 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 map <leader>t<leader> :tabnext<cr>
-map <C-p> :FZF<cr>
+map <C-p> :CtrlP<cr>
 
 " Commands
 command W w !sudo tee % > /dev/null/
@@ -89,5 +75,5 @@ command W w !sudo tee % > /dev/null/
 syntax on
 colorscheme dracula
 
-" Enable loading the plugin/indent files for specific file types
-filetype plugin indent on
+" LaTEX
+let g:tex_flavor = "latex"
