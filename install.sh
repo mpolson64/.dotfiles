@@ -22,16 +22,13 @@ while true; do
     read -p "Configure vim? [Y/n]" yn
     case $yn in
         [Yy]* )
-            git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+            curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+                https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
             touch ~/.vimrc
             ln -sfv ~/.dotfiles/vim/.vimrc ~
 
-            mkdir -p ~/.vim
-            ln -sfv ~/.dotfiles/vim/vundle.vim ~/.vim
-
-            vim +PluginInstall +qall
-
+            vim +PlugInstall +qall
             break;;
 
         [Nn]* )
