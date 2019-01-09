@@ -56,7 +56,6 @@ nmap s <Plug>(easymotion-s2)
 
 " Keybinds
 imap jk <Esc> " more comfortable return to normal mode
-tmap <Esc> <C-\><C-n> " exit terminal with escape
 
 let mapleader="\<space>"
 let g:mapleader="\<space>"
