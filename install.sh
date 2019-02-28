@@ -64,24 +64,4 @@ while true; do
     esac
 done
 
-## Emacs
-while true; do
-    read -p "Configure EMACS? [Y/n]" yn
-    case $yn in
-        [Yy]* )
-            mkdir -p ~/.emacs.d
-            touch ~/.emacs.d/init.el
-            ln -sfv ~/.dotfiles/emacs.d/init.el ~/.emacs.d/init.el
-            break;;
-
-        [Nn]* )
-            echo "EMACS skipped"
-            break;;
-
-        * )
-            echo "Please answer y or n"
-    esac
-done
-
-
 exit

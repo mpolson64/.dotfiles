@@ -11,13 +11,6 @@ My current primary editor. My current config includes many plugins that take adv
 * Ale
 * Airline
 
-## Emacs
-Emacs was my primary editor; I have since switched to Neovim but the Emacs configuration remains as I left it when I last used it. The following are the primary packages I use:
-* Evil
-* Helm
-* Company
-* Projectile
-
 ## Git
 Nothing worth mentioning.
 
